@@ -36,9 +36,9 @@ export function Navbar() {
           <div className="relative flex h-8 w-14 items-center justify-center overflow-hidden sm:h-9 sm:w-16">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo-bps.jpg"
+              src="/logo-bps.png"
               alt="bps logo"
-              className="h-10 w-auto max-w-none object-contain mix-blend-multiply sm:h-12"
+              className="h-10 w-auto max-w-none object-contain sm:h-12"
             />
           </div>
           <span className="hidden h-4 w-px bg-slate-200 lg:block" />

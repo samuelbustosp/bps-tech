@@ -460,9 +460,9 @@ export function OfferingsSection() {
         />
 
         {/* Grilla responsiva con figuras animadas al hover */}
-        <div className="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {offerings.map((item, idx) => (
-            <Reveal key={item.code} delay={(idx % 3) * 0.06}>
+            <Reveal key={item.code} delay={(idx % 3) * 0.06} className="min-w-0">
               <OfferingCard item={item} />
             </Reveal>
           ))}
@@ -480,7 +480,7 @@ export function OfferingsSection() {
               </span>
             </div>
 
-            <div className="mt-5 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+            <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
               {planningSteps.map((step) => (
                 <div key={step.num} className="border-l-2 border-bps-500 pl-4">
                   <div className="font-mono text-[11px] font-bold text-bps-600">{step.num}</div>

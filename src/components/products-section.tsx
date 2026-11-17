@@ -46,19 +46,19 @@ export function ProductsSection() {
           />
         </div>
 
-        <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2">
           {products.map((product, idx) => (
-            <Reveal key={product.name} delay={idx * 0.08}>
+            <Reveal key={product.name} delay={idx * 0.08} className="min-w-0">
               <a
                 href={product.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="minimal-card group flex h-full flex-col justify-between rounded-2xl p-5 sm:rounded-3xl sm:p-8"
+                className="minimal-card group flex h-full w-full min-w-0 flex-col justify-between overflow-hidden rounded-2xl p-5 sm:rounded-3xl sm:p-8"
               >
-                <div>
+                <div className="min-w-0">
                   {/* Cabecera del producto */}
                   <div className="flex items-start justify-between gap-3 sm:gap-4">
-                    <div className="flex min-w-0 items-center gap-3.5 sm:gap-4">
+                    <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
                       <div className="size-12 shrink-0 overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-xs sm:size-14">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
@@ -68,8 +68,8 @@ export function ProductsSection() {
                         />
                       </div>
 
-                      <div className="min-w-0">
-                        <span className="block truncate font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-bps-600">
+                      <div className="min-w-0 flex-1">
+                        <span className="block break-words font-mono text-[10px] font-bold uppercase leading-snug tracking-[0.12em] text-bps-600 sm:truncate sm:tracking-[0.16em]">
                           {product.category}
                         </span>
                         <div className="mt-0.5 flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
@@ -108,7 +108,7 @@ export function ProductsSection() {
 
                 {/* Link visible */}
                 <div className="mt-6 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-4 text-xs font-semibold text-bps-600 sm:mt-7">
-                  <span className="inline-flex items-center gap-1.5 truncate font-mono text-[11px] text-slate-400">
+                  <span className="inline-flex min-w-0 items-center gap-1.5 truncate font-mono text-[11px] text-slate-400">
                     <Globe className="size-3.5 shrink-0 text-bps-500" />
                     <span className="truncate">
                       {product.url.replace("https://", "").replace(/\/$/, "")}

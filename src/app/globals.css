@@ -25,6 +25,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #ffffff;
+  overflow-x: clip;
 }
 
 body {
@@ -32,6 +33,7 @@ body {
   color: #0a1128;
   font-family: var(--font-sans);
   letter-spacing: -0.012em;
+  overflow-x: clip;
 }
 
 /* Grilla arquitectónica minimalista */
@@ -40,6 +42,13 @@ body {
   background-image:
     linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+}
+
+.bg-arch-grid-accent {
+  background-size: 56px 56px;
+  background-image:
+    linear-gradient(to right, rgba(29, 70, 242, 0.14) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(29, 70, 242, 0.14) 1px, transparent 1px);
 }
 
 /* Tarjeta limpia de superficie */

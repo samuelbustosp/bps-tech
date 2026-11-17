@@ -28,7 +28,7 @@ export function AboutSection() {
       className="border-b border-slate-200/80 bg-white py-16 sm:py-20 lg:py-28"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-12">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-start lg:gap-12">
           <div>
             <SectionHeading
               index="01"

@@ -44,7 +44,7 @@ export function VisionSection() {
               />
             </div>
 
-            <div className="relative mt-8 grid gap-6 border-t border-white/15 pt-8 sm:mt-12 sm:pt-10 md:grid-cols-3">
+            <div className="relative mt-8 grid grid-cols-1 gap-6 border-t border-white/15 pt-8 sm:mt-12 sm:pt-10 md:grid-cols-3">
               {goals.map((item) => (
                 <div key={item.num}>
                   <span className="font-mono text-xs font-semibold text-blue-200">{item.num}</span>
